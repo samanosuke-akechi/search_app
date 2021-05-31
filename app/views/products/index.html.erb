@@ -7,3 +7,15 @@
   <br>
   <%= f.submit '検索' %>
 <% end %>
+
+<%# 商品一覧 %>
+<% @products.each do |product| %>
+  <br>
+  <li>
+    <%= product.name %>
+    <%= product.size %>
+    <%= product.status %>
+    <%= product.price %>
+    <%= product.category.name %>
+  </li>
+<% end %>
